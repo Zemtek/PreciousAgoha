@@ -81,7 +81,7 @@ export const projects = [
     year: "2025",
     roles: ["Camera", "B-Roll", "Editor", "Reel Cut"],
     image: workContentment,
-    url: "https://youtu.be/Xf-wDeaBywQ",
+    url: "https://youtu.be/zNcyIqwhdpM",
     summary:
       "A 52-minute long-form interview documentary. I assisted with camera and filming, edited B-roll, and supported post-production — then cut a 1:30 reel published to Instagram in January 2025.",
     note: "Long-form storytelling that had to breathe — and a tight social cut that had to land fast.",
@@ -95,7 +95,7 @@ export const projects = [
     year: "2025",
     roles: ["Camera", "B-Roll", "Post-Production"],
     image: workHausa,
-    url: "https://youtu.be/zNcyIqwhdpM",
+    url: "https://youtu.be/Xf-wDeaBywQ",
     summary:
       "An on-location street documentary capturing the emerging Hausa rap scene. I shot original B-roll on the ground, sourced supplementary footage, and supported editing, sequencing, and final delivery.",
     note: "Run-and-gun field work, cut into a fast, energetic street portrait.",
@@ -126,7 +126,7 @@ export const about = {
   ],
   pullquote: "My goal is simple: Make every video worth watching till the last second.",
   tools: [
-    "Premiere Pro",
+    "Adobe Premiere Pro",
     "Audition",
     "After Effects",
     "Photoshop",
@@ -134,7 +134,6 @@ export const about = {
     "Adobe Firefly",
     "CapCut",
     "Canva",
-    "Lightroom",
   ],
 };
 
