@@ -121,7 +121,7 @@ export const caseStudy = {
 export const about = {
   heading: "Behind The Camera",
   paragraphs: [
-    "I am a creative video editor and media producer with hands-on experience in editing short-form content, social media videos, podcasts, and branded visuals.",
+    "I am a creative video editor and media producer with hands-on experience in editing short-form and long-form content, social media videos, podcasts, and branded visuals.",
     "My focus is not just editing, it\u2019s storytelling, pacing, and audience retention. I help brands and creators transform their raw ideas into polished content that performs.",
   ],
   pullquote: "My goal is simple: Make every video worth watching till the last second.",
