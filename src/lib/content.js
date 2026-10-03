@@ -81,7 +81,7 @@ export const projects = [
     year: "2025",
     roles: ["Camera", "B-Roll", "Editor", "Reel Cut"],
     image: workContentment,
-    url: "https://youtu.be/zNcyIqwhdpM",
+    url: "https://youtu.be/Xf-wDeaBywQ",
     summary:
       "A 52-minute long-form interview documentary. I assisted with camera and filming, edited B-roll, and supported post-production — then cut a 1:30 reel published to Instagram in January 2025.",
     note: "Long-form storytelling that had to breathe — and a tight social cut that had to land fast.",
@@ -95,10 +95,70 @@ export const projects = [
     year: "2025",
     roles: ["Camera", "B-Roll", "Post-Production"],
     image: workHausa,
-    url: "https://youtu.be/Xf-wDeaBywQ",
+    url: "https://youtu.be/zNcyIqwhdpM",
     summary:
       "An on-location street documentary capturing the emerging Hausa rap scene. I shot original B-roll on the ground, sourced supplementary footage, and supported editing, sequencing, and final delivery.",
     note: "Run-and-gun field work, cut into a fast, energetic street portrait.",
+  },
+];
+
+// Cover images for the "View More" projects are picked up automatically from
+// src/assets/projects/ by filename (project-04.jpg, project-05.png, ...).
+// Vite's built-in glob import: no extra dependency. Returns null until a file exists.
+const projectImageFiles = import.meta.glob(
+  "../assets/projects/*.{jpg,jpeg,png,webp}",
+  { eager: true, import: "default" }
+);
+const projectImage = (slug) => {
+  const hit = Object.entries(projectImageFiles).find(
+    ([path]) => path.split("/").pop().replace(/\.[^.]+$/, "") === slug
+  );
+  return hit ? hit[1] : null;
+};
+
+// Revealed by the "View More" button under What I've Produced.
+// The source pages couldn't be read (YouTube rate-limited, Instagram blocks
+// automated access), so only facts confirmed by the URL itself are used:
+// the platform and the link. Add title / kicker / runtime / year / summary / note /
+// roles on any entry and the card shows them automatically.
+export const moreProjects = [
+  {
+    id: "more-youtube-1",
+    index: "04",
+    platform: "YouTube",
+    title: "YouTube Video",
+    kicker: "More Work \u00b7 YouTube",
+    image: projectImage("project-04"),
+    // NOTE: the link originally supplied was youtu.be/ZT8ssYDq8KM6 (12 characters);
+    // YouTube IDs are 11 characters, so the trailing "6" is treated as a typo.
+    url: "https://youtu.be/ZT8ssYDq8KM",
+  },
+  {
+    id: "more-youtube-2",
+    index: "05",
+    platform: "YouTube",
+    title: "YouTube Video",
+    kicker: "More Work \u00b7 YouTube",
+    image: projectImage("project-05"),
+    url: "https://youtu.be/srEx5fPw7M4",
+  },
+  {
+    id: "more-instagram-1",
+    index: "06",
+    platform: "Instagram",
+    title: "Instagram Reel",
+    kicker: "More Work \u00b7 Instagram",
+    image: projectImage("project-06"),
+    url: "https://www.instagram.com/reel/DcyUYqxAE2h/",
+  },
+  {
+    id: "more-instagram-2",
+    index: "07",
+    platform: "Instagram",
+    title: "Instagram Reel",
+    kicker: "More Work \u00b7 Instagram",
+    image: projectImage("project-07"),
+    url: "https://www.instagram.com/reel/DdrvzMuMvg1/",
   },
 ];
 
@@ -121,12 +181,12 @@ export const caseStudy = {
 export const about = {
   heading: "Behind The Camera",
   paragraphs: [
-    "I am a creative video editor and media producer with hands-on experience in editing short-form and long-form content, social media videos, podcasts, and branded visuals.",
+    "I am a creative video editor and media producer with hands-on experience in editing short-form content, social media videos, podcasts, and branded visuals.",
     "My focus is not just editing, it\u2019s storytelling, pacing, and audience retention. I help brands and creators transform their raw ideas into polished content that performs.",
   ],
   pullquote: "My goal is simple: Make every video worth watching till the last second.",
   tools: [
-    "Adobe Premiere Pro",
+    "Premiere Pro",
     "Audition",
     "After Effects",
     "Photoshop",
@@ -134,6 +194,7 @@ export const about = {
     "Adobe Firefly",
     "CapCut",
     "Canva",
+    "Lightroom",
   ],
 };
 
@@ -234,6 +295,13 @@ export const testimonials = [
       "Working with Precious on our Lucky Udu content was effortless. She understood the brief immediately, handled pressure on set calmly, and delivered a final cut that exceeded what we expected.",
     name: "Studio Producer",
     role: "Lucky Udu Studio",
+  },
+  {
+    quote:
+      "Precious has a strong creative instinct and an impressive eye for detail. She approaches every edit with intention, understands the story behind the footage, and consistently finds ways to make the final product more engaging and visually compelling.",
+    // No personal name supplied, so the role leads, matching the other entries.
+    name: "Creative Director",
+    role: "Capital Power Multimedia",
   },
 ];
 

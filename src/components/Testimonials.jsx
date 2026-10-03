@@ -13,9 +13,13 @@ export default function Testimonials() {
             <Reveal
               key={i}
               delay={i * 0.1}
-              className="flex flex-col justify-between gap-10 bg-ink p-8 sm:p-12"
+              className={`flex flex-col justify-between gap-10 bg-ink p-8 sm:p-12 ${
+                i === testimonials.length - 1 && testimonials.length % 2 === 1
+                  ? "md:col-span-2"
+                  : ""
+              }`}
             >
-              <p className="font-display text-2xl font-light italic leading-snug text-bone sm:text-3xl">
+              <p className="max-w-4xl font-display text-2xl font-light italic leading-snug text-bone sm:text-3xl">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3">

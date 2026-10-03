@@ -56,6 +56,25 @@ All copy, stats, projects, services, motion graphics, and links live in
 > so it plays in every browser (Chrome and Firefox can't play HEVC). Keep new videos
 > as H.264 MP4 for the widest support.
 
+## "View More" projects & their images
+
+Under **What I've Produced**, the *View More* button reveals four extra projects
+(defined in `moreProjects` in `src/lib/content.js`). Their cover images are
+placeholders until you add files to **`src/assets/projects/`** using these exact names
+(`.jpg`, `.jpeg`, `.png` or `.webp`):
+
+| File name | Project |
+| --- | --- |
+| `project-04` | YouTube video (`youtu.be/ZT8ssYDq8KM`) |
+| `project-05` | YouTube video (`youtu.be/srEx5fPw7M4`) |
+| `project-06` | Instagram reel (`DcyUYqxAE2h`) |
+| `project-07` | Instagram reel (`DdrvzMuMvg1`) |
+
+The card switches to your image automatically; no code change needed. Cards display at
+16:9, so use a landscape image (1280×720+). To add a real title, runtime, year, summary,
+note or roles, add those fields to the matching entry in `moreProjects`; the card shows
+them as soon as they exist.
+
 ## Accessibility & motion
 
 The layout is fully responsive with a mobile menu, visible keyboard focus, and it
