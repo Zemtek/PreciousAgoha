@@ -2,7 +2,6 @@
 // Content sourced from Precious Agoha's original portfolio.
 
 import portrait from "../assets/portrait.jpg";
-import workSecretGifts from "../assets/work-secret-gifts.jpg";
 import workContentment from "../assets/work-contentment.jpg";
 import workHausa from "../assets/work-hausa.jpg";
 import brandPoster from "../assets/brand-poster.jpg";
@@ -59,22 +58,8 @@ export const stats = [
 
 export const projects = [
   {
-    id: "secret-gifts",
-    index: "01",
-    title: "Secret Gifts & Giveaway at Lucky Udu Studio",
-    kicker: "Event Video · Solo Project",
-    runtime: "13:08",
-    year: "2024",
-    roles: ["Director", "Camera", "Editor"],
-    image: workSecretGifts,
-    url: "https://youtu.be/MkO7IAzxTrQ",
-    summary:
-      "Full solo production — filmed and edited end-to-end. I managed all on-set filming and handled the complete edit in Premiere Pro: cuts, transitions, audio mixing, and final export.",
-    note: "My first independent major project — every aspect of production from pre-production planning to final delivery.",
-  },
-  {
     id: "contentment",
-    index: "02",
+    index: "01",
     title: "What Lack of Contentment Can Force People To Do",
     kicker: "Interview Documentary · Long-Form",
     runtime: "52:29",
@@ -88,7 +73,7 @@ export const projects = [
   },
   {
     id: "hausa-rappers",
-    index: "03",
+    index: "02",
     title: "Meet the New Wave of Hausa Rappers Taking Over TikTok",
     kicker: "Street Documentary · On Location",
     runtime: "6:57",
@@ -124,13 +109,13 @@ const projectImage = (slug) => {
 export const moreProjects = [
   {
     id: "more-youtube-1",
-    index: "04",
+    index: "03",
     platform: "YouTube",
     title: "Aerial Drone Services in Abuja | Capital Power Drones",
     kicker: "Promo Video \u00b7 Aerial Drone Services",
     summary:
-      "A 1:31 promotional video for Capital Power Drones, presenting its aerial drone services in Abuja. A compact, visual-first edit built to show the work rather than describe it.",
-    note: "A 1:31 cut where every second has to earn its place.",
+      "A promotional video for Capital Power Drones, presenting its aerial drone services in Abuja. A compact, visual-first edit built to show the work rather than describe it.",
+    note: "A short cut where every second has to earn its place.",
     roles: ["Video Editing", "Post-Production"],
     image: projectImage("project-04"),
     // NOTE: the link originally supplied was youtu.be/ZT8ssYDq8KM6 (12 characters);
@@ -139,7 +124,7 @@ export const moreProjects = [
   },
   {
     id: "more-youtube-2",
-    index: "05",
+    index: "04",
     platform: "YouTube",
     title: "Everyone Wants Success. Few Know Where to Start. | Nasiruddin Shuraim | From Lowest to Highest Podcast",
     kicker: "Podcast Episode \u00b7 Long-Form",
@@ -152,7 +137,7 @@ export const moreProjects = [
   },
   {
     id: "more-instagram-1",
-    index: "06",
+    index: "05",
     platform: "Instagram",
     title: "APSI CHECK Summit 2026",
     kicker: "Event Reel \u00b7 Short-Form",
@@ -161,19 +146,23 @@ export const moreProjects = [
     note: "A live event, shaped into a story made for the scroll.",
     roles: ["Video Editing", "Social Media Content"],
     image: projectImage("project-06"),
+    // Vertical image shown in a 16:9 card, so the focal point is set. APSI: centres the full wordmark + speaker in the 16:9 window.
+    imagePosition: "50% 22%",
     url: "https://www.instagram.com/reel/DcyUYqxAE2h/",
   },
   {
     id: "more-instagram-2",
-    index: "07",
+    index: "06",
     platform: "Instagram",
     title: "Petroleum Technology Development Fund",
     kicker: "Institutional Reel \u00b7 Short-Form",
     summary:
-      "A short-form Instagram reel on the Petroleum Technology Development Fund, featuring aerial views of the PTDF building and framed vertically for the feed.",
-    note: "An institution, seen from above.",
+      "A cinematic short-form film capturing the scale, presence, and architecture of the Petroleum Technology Development Fund. Built around a dramatic visual progression that reveals the institution through cinematic shots and a carefully paced build-up.",
+    note: "An institution, captured with cinematic intent.",
     roles: ["Video Editing", "Social Media Content"],
     image: projectImage("project-07"),
+    // Vertical image shown in a 16:9 card, so the focal point is set. PTDF: keeps the logo, glass tower and skyline in the 16:9 window.
+    imagePosition: "50% 20%",
     url: "https://www.instagram.com/reel/DdrvzMuMvg1/",
   },
 ];
@@ -302,7 +291,7 @@ export const showreel = {
 export const testimonials = [
   {
     quote:
-      "Precious has an instinct for storytelling that goes beyond technical skill. She knows when a cut should breathe and when it needs to land hard — and that makes all the difference in documentary work.",
+      "Precious has an instinct for storytelling that goes beyond technical skill. She knows when a cut should breathe and when it needs to land hard and that makes all the difference in documentary work.",
     name: "Documentary Collaborator",
     role: "Lucky Udu Studio",
   },

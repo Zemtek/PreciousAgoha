@@ -16,6 +16,11 @@ export default function ProjectCard({ project, flip = false }) {
   // Optional fields: projects without full details (e.g. pending cover image,
   // runtime, summary) degrade gracefully instead of rendering empty elements.
   const platform = project.platform ?? "YouTube";
+  // Optional focal point for images whose shape differs from the 16:9 frame
+  // (e.g. vertical reel covers). Unset = identical behaviour to before.
+  const focal = project.imagePosition
+    ? { objectPosition: project.imagePosition }
+    : undefined;
   const hasMeta = Boolean(project.runtime || project.year);
 
   const { scrollYProgress } = useScroll({
@@ -51,7 +56,7 @@ export default function ProjectCard({ project, flip = false }) {
               src={project.image}
               alt={project.title}
               loading="lazy"
-              style={reduce ? undefined : { y: imgY, scale: 1.12 }}
+              style={reduce ? focal : { y: imgY, scale: 1.12, ...focal }}
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-cine group-hover:scale-[1.18]"
             />
           ) : (

@@ -59,8 +59,9 @@ All copy, stats, projects, services, motion graphics, and links live in
 ## "View More" projects & their images
 
 Under **What I've Produced**, the *View More* button reveals four extra projects
-(defined in `moreProjects` in `src/lib/content.js`). Their cover images are
-placeholders until you add files to **`src/assets/projects/`** using these exact names
+(defined in `moreProjects` in `src/lib/content.js`). Their cover images live in
+**`src/assets/projects/`** and are matched to each card by file name. To replace one,
+overwrite the file keeping the same name (a card with no file shows a placeholder)
 (`.jpg`, `.jpeg`, `.png` or `.webp`):
 
 | File name | Project |
@@ -70,7 +71,10 @@ placeholders until you add files to **`src/assets/projects/`** using these exact
 | `project-06` | Instagram reel (`DcyUYqxAE2h`) |
 | `project-07` | Instagram reel (`DdrvzMuMvg1`) |
 
-The card switches to your image automatically; no code change needed. Cards display at
+The card switches to your image automatically; no code change needed.
+Vertical images (the two Instagram reels) are cropped to the 16:9 card; choose which part
+stays visible with `imagePosition` on that entry in `moreProjects` (e.g. `"50% 22%"`:
+the second number is how far down the image the visible window sits, 0% = top, 100% = bottom). Cards display at
 16:9, so use a landscape image (1280×720+). To add a real title, runtime, year, summary,
 note or roles, add those fields to the matching entry in `moreProjects`; the card shows
 them as soon as they exist.
