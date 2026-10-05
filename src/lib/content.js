@@ -291,7 +291,7 @@ export const showreel = {
 export const testimonials = [
   {
     quote:
-      "Precious has an instinct for storytelling that goes beyond technical skill. She knows when a cut should breathe and when it needs to land hard and that makes all the difference in documentary work.",
+      "Precious has an instinct for storytelling that goes beyond technical skill. She knows when a cut should breathe and when it needs to land hard — and that makes all the difference in documentary work.",
     name: "Documentary Collaborator",
     role: "Lucky Udu Studio",
   },
